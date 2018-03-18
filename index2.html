@@ -10,8 +10,9 @@ description: This is a description2
 		<title>This is a title</title>
 		<style>
 			body {
-				margin:  0;
-				padding:  0;
+				margin: 0;
+				padding: 0;
+				overflow: hidden;
 			}
 			.wrapper {
 				width: 100vw;
@@ -23,12 +24,13 @@ description: This is a description2
 				grid-template-columns: auto auto auto auto;
 				grid-template-rows: auto 1fr;
 				grid-template-areas: "home photo contact about"
-					"content content content content";
+					"cntent cntent cntent cntent";
 			}
 			.wrapper div {
 				padding: 20px;
 				align-self: center;
 				justify-self: center;
+				z-index: 1;
 			}
 			.home {
 				grid-area: home;
@@ -43,14 +45,14 @@ description: This is a description2
 				grid-area: about;
 			}
 			.content {
-				grid-area: content;
+				grid-area: cntent;
 				overflow: hidden;
 			}
 			.content video {
 				width: 100vw;
 				height: 100vh;
-				object-fit: contain;
-				
+				object-fit: cover;
+				z-index: -1;
 			}
 			a {
 				color: #f1f1f1;
