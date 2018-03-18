@@ -7,13 +7,40 @@ description: This is a description2
 <!DOCTYPE html>
 <html>
 	<head>
+		<meta charset="utf-8" />
+		<title></title>
 		<style>
-			div {
-				background: rgba(0, 0, 0, .1);
+			.wrapper {
+				width: 100vw;
+				height: 100vh;
+				background-color: #000;
+				display: grid;
+				grid-template-columns: auto auto auto auto;
+				grid-template-rows: auto 1fr;
+				grid-template-areas: "home photo contact about"
+					"content content content content";
+			}
+			.home {
+				grid-area: "home";
+			}
+			.photo {
+				grid-area: "photo";
+			}
+			.contact {
+				grid-area: "contact";
+			}
+			.about {
+				grid-area: "about";
+			}
+			.content {
+				grid-area: "content";
 			}
 		</style>
 	</head>
 	<body>
-		<div>Test<div><input /></div></div>
+		<div class="wrapper">
+			<div class="home">Home</div><div class="photo">Photo</div><div class="contact">Contact</div><div class="about">About</div>
+			<div id="content" class="content">Content</div>
+		</div>
 	</body>
 </html>
