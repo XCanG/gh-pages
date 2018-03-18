@@ -29,6 +29,7 @@ description: This is a description2
 			.wrapper div {
 				padding: 20px;
 				z-index: 1;
+				text-shadow: 1px 1px 20px #03aac5;
 			}
 			.home {
 				grid-area: home;
@@ -46,11 +47,22 @@ description: This is a description2
 				grid-area: cntent;
 				overflow: hidden;
 				padding: 0 !important;
+				position: relative;
+			}
+			.content div {
+				position: fixed;
+				margin: 150px;
+				font-size: 35px;
+				text-align: justify;
+				background: rgba(0, 0, 0, .4);
+				border-radius: 25px;
+				box-shadow: 0 0 10px 10px rgba(0, 0, 0, .4);
 			}
 			.content video {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
+				position: absolute;
 				z-index: -1;
 			}
 			a {
@@ -69,6 +81,7 @@ description: This is a description2
 			<div class="about"><a href="about.html">About</a></div>
 
 			<div id="content" class="content">
+				<div>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</div>
 				<video src="videoplayback.webm" preload="auto" autoplay loop></video>
 			</div>
 		</div>
