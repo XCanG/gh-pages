@@ -44,6 +44,13 @@ description: This is a description2
 			}
 			.content {
 				grid-area: content;
+				overflow: hidden;
+			}
+			.content video {
+				width: 100vw;
+				height: 100vh;
+				object-fit: contain;
+				
 			}
 			a {
 				color: #f1f1f1;
@@ -60,7 +67,9 @@ description: This is a description2
 			<div class="contact"><a href="contact.html">Contact</a></div>
 			<div class="about"><a href="about.html">About</a></div>
 
-			<div id="content" class="content">Content</div>
+			<div id="content" class="content">
+				<video src="videoplayback.webm" preload="auto" autoplay loop></video>
+			</div>
 		</div>
 	</body>
 </html>
